@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<h2>Sign up for a free account</h2>
+<p>Select below the type of account you want to create</p>
+<a href="{% url 'vendor-signup' %}">I'm a Seller</a><br>
+<a href="{% url 'customer-signup' %}">I'm a Buyer</a>
+{% endblock %}

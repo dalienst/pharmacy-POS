@@ -1,0 +1,27 @@
+Pharmacy Point Of Sale
+    - Set up database: mysql
+    - Accounts app
+        - Employees/vendors
+        - Customers
+        - Guests: does not need to sign up. Limited functionalities. Can browse products only
+    - Products app - Medicines are the main product
+        - Models:
+            - Category
+            - Medicines
+                - Name
+                - Description
+                - Image
+                - Quantity
+                - Category
+                - Availability
+                - Entered by
+                - Price
+        - Views
+        - Urls
+        - Templates
+    - Order app
+        - Models
+            - Cart
+            - Order List
+            - Checkout
+        - Checkout

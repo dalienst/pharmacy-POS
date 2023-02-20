@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+        <div class="profile-card">
+            {% if user.is_vendor %}
+            <h2>Hello, {{ vendor.user }}</h2>
+            <p><strong>Name: </strong>{{vendor.name}}</p>
+            <p><strong>Location: </strong>{{vendor.location}}</p>
+            <p><strong>Contact: </strong>{{vendor.contact}}</p>
+            
+            <h4><a href="{% url 'vendor-update' user.id %}">Update Profile</a></h4>
+            <h4><a href="{% url 'vendor-delete' user.id %}">Delete Account</a></h4>
+            
+            {% elif user.is_customer %}
+            <h2>Hello, {{ customer.user }}</h2>
+            <p><strong>Name: </strong>{{ customer.name }}</p>
+            <p><strong>Location: </strong>{{ customer.location }}</p>
+            <p><strong>Contact: </strong>{{ customer.contact }}</p>
+            
+            <h4><a href="{% url 'customer-update' user.id %}">Update Profile</a></h4>
+            <h4><a href="{% url 'customer-delete' user.id %}">Delete Account</a></h4>
+            {% endif %}
+        </div>
+{% endblock %}
